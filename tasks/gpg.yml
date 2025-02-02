@@ -4,7 +4,7 @@
 ---
 - name: "LND | Download {{ gpg_user }}.asc"
   ansible.builtin.get_url:
-    url:  https://raw.githubusercontent.com/lightningnetwork/lnd/master/scripts/keys/{{ gpg_user }}.asc
+    url:  https://raw.githubusercontent.com/lightningnetwork/lnd/refs/tags/v{{ lnd_version }}/scripts/keys/{{ gpg_user }}.asc
     dest: /tmp/lnd-{{ gpg_user }}.asc
     http_agent: yourbtc-ansible
 
