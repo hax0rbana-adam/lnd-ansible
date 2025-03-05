@@ -12,7 +12,7 @@ lnd_arch: linux-amd64
 lnd_pgp_keys:
   - roasbeef
   - guggero
-  - bhandras
+  - ellemouton
 
 # Allow the systemd service more time to startup. Comment this out to have the
 # default timeout from systemd to be used.
