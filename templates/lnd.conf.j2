@@ -6,6 +6,9 @@ listen={{ lnd_listen }}
 gc-canceled-invoices-on-startup=true
 gc-canceled-invoices-on-the-fly=true
 tlsextradomain={{ lnd_tls_extra_domain }}
+{% if lnd_wallet_unlock_password is defined %}
+wallet-unlock-password-file={{ lnd_data_dir }}/wallet.pw
+{% endif %}
 
 
 [Bitcoin]

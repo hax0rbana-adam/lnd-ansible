@@ -7,6 +7,9 @@ lnd_group: lnd
 lnd_version: 0.16.0-beta
 lnd_arch: linux-amd64
 
+# If you want to automatically unlock the wallet upon service start, set
+# lnd_wallet_unlock_password
+
 # LND maintainers GPG public keys. Name must match the ones found here:
 # https://github.com/lightningnetwork/lnd/tree/master/scripts/keys
 lnd_pgp_keys:

@@ -83,6 +83,15 @@
     path: "{{ lnd_data_dir }}"
     state: directory
 
+- name: "LND | Write LND wallet unlock password to disk (if provided)"
+  ansible.builtin.copy:
+    dest: "{{ lnd_data_dir }}/wallet.pw"
+    content: "{{lnd_wallet_unlock_password }}"
+    owner: "{{ lnd_user }}"
+    group: "{{ lnd_group }}"
+    mode: 0400
+  when: lnd_wallet_unlock_password is defined
+
 - name: "LND | Ensure LND data directory '{{ lnd_data_dir }}' uses the correct permissions"
   ansible.builtin.file:
     path: "{{ lnd_data_dir }}"
