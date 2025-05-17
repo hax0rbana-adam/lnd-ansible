@@ -24,7 +24,7 @@ PIDFile=/run/lnd/{{ lnd_network }}/lnd.pid
 RuntimeDirectory=lnd/{{ lnd_network }}
 RuntimeDirectoryMode=0710
 
-Restart=on-failure
+Restart=always
 RestartSec=30
 {% if lnd_timeout %}
 TimeoutSec={{ lnd_timeout }}
