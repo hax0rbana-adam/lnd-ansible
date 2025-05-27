@@ -9,6 +9,11 @@ tlsextradomain={{ lnd_tls_extra_domain }}
 {% if lnd_wallet_unlock_password is defined %}
 wallet-unlock-password-file={{ lnd_data_dir }}/wallet.pw
 {% endif %}
+{% if lnd_extra_application_options is defined %}
+{% for option in lnd_extra_application_options %}
+{{ option }}
+{% endfor %}
+{% endif %}
 
 
 [Bitcoin]

@@ -28,6 +28,11 @@ lnd_alias: fooock
 lnd_log_level: info
 lnd_listen: 127.0.0.1
 lnd_tls_extra_domain: "{{ ansible_hostname }}"
+# If you have extra options to add, list them in lnd_extra_application_options
+#lnd_extra_application_options
+#  - restlisten=0.0.0.0:8080
+#  - letsencryptlisten=:8000
+#  - accept-amp=true
 
 # Bitcoind configuration
 lnd_bitcoind_dir: /data/bitcoin
