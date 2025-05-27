@@ -42,4 +42,6 @@ lnd_bolt_auto_compact: true
 lnd_bolt_auto_compact_min_age: 48h
 
 lnd_tor_active: false
+# hybrid mode allows both tor and clearnet connections, only applies if tor is active
+lnd_tor_hybrid_mode: false
 lnd_watchtower_active: false
