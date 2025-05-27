@@ -132,6 +132,14 @@
     owner: "{{ lnd_user }}"
     group: "{{ lnd_group }}"
 
+- name: Ensuring the user who runs the lnd service can create tor hidden services
+  ansible.builtin.user:
+    user: "{{ lnd_user }}"
+    groups: debian-tor
+    append: true
+  notify: LND | Ensure lnd systemd unit is restarted
+  when: lnd_tor_active and ansible_os_family == 'Debian'
+
 - name: "LND | Ensure 'lnd-{{ lnd_network }}.service' systemd unit is enabled and started"
   ansible.builtin.systemd:
     name: lnd-{{ lnd_network }}.service
