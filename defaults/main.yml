@@ -20,6 +20,7 @@ lnd_pgp_keys:
 # Allow the systemd service more time to startup. Comment this out to have the
 # default timeout from systemd to be used.
 lnd_timeout: 900
+# lnd_timeout_start: 7200
 
 # LND node configuration
 lnd_data_dir: /data/lnd

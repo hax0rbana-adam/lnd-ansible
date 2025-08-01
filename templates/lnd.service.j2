@@ -29,6 +29,9 @@ RestartSec=30
 {% if lnd_timeout %}
 TimeoutSec={{ lnd_timeout }}
 {% endif %}
+{% if lnd_timeout_start %}
+TimeoutStartSec={{ lnd_timeout_start }}
+{% endif %}
 
 User={{ lnd_user }}
 Group={{ lnd_group }}
